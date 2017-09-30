@@ -1,0 +1,17 @@
+[package]
+name = "mackerel_plugin_dice"
+version = "0.0.0"
+authors = ["itchyny <itchyny@hatena.ne.jp>"]
+description = "Dice plugin example using mackerel-plugin-rs"
+repository = "https://github.com/itchyny/mackerel-plugin-dice"
+readme = "README.md"
+license = "MIT"
+keywords = ["cli", "mackerel"]
+
+[dependencies]
+mackerel_plugin = "0.1"
+rand = "0.3"
+
+[[bin]]
+name = "mackerel-plugin-dice"
+path = "bin/main.rs"
