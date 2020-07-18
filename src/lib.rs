@@ -1,4 +1,3 @@
-#[macro_use]
 extern crate mackerel_plugin;
 extern crate rand;
 
@@ -10,8 +9,14 @@ pub struct DicePlugin {}
 impl Plugin for DicePlugin {
     fn fetch_metrics(&self) -> Result<HashMap<String, f64>, String> {
         let mut metrics = HashMap::new();
-        metrics.insert("dice.d6".to_string(), (rand::random::<u64>() % 6 + 1) as f64);
-        metrics.insert("dice.d20".to_string(), (rand::random::<u64>() % 20 + 1) as f64);
+        metrics.insert(
+            "dice.d6".to_string(),
+            (rand::random::<u64>() % 6 + 1) as f64,
+        );
+        metrics.insert(
+            "dice.d20".to_string(),
+            (rand::random::<u64>() % 20 + 1) as f64,
+        );
         Ok(metrics)
     }
 
