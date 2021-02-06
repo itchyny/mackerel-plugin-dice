@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Build artifact
       run: zip mackerel-plugin-dice.zip mackerel-plugin-dice README.md LICENSE
     - name: Create Release
       id: create_release
-      uses: actions/create-release@master
+      uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
     - name: Upload Release Asset
-      uses: actions/upload-release-asset@master
+      uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:

@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Get metadata
       run: MACKEREL_AGENT_PLUGIN_META=1 ./mackerel-plugin-dice
     - name: Get metrics
