@@ -1,16 +1,17 @@
 [package]
 name = "mackerel_plugin_dice"
 version = "0.0.0"
-authors = ["itchyny <itchyny@hatena.ne.jp>"]
+authors = ["itchyny <itchyny@cybozu.co.jp>"]
 description = "Dice plugin example using mackerel-plugin-rs"
 repository = "https://github.com/itchyny/mackerel-plugin-dice"
 readme = "README.md"
 license = "MIT"
 keywords = ["cli", "mackerel"]
+edition = "2021"
 
 [dependencies]
-mackerel_plugin = "0.2.4"
-rand = "0.7.3"
+mackerel_plugin = "0.2.6"
+rand = "0.8.5"
 
 [[bin]]
 name = "mackerel-plugin-dice"
